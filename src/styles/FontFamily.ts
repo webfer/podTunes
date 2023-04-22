@@ -13,23 +13,26 @@ export const GlobalFonts = createGlobalStyle`
   font-family: 'ABCMonumentGRegular';
   src: url(${ABCWoff2Regular}) format('woff2'),
     url(${ABCWoffRegular}) format('woff');
-    font-style: normal;
+    font-weight: 400;
     font-display: swap;
+    font-style: normal;
 }
 @font-face {
   font-family: 'ABCMonumentGMedium';
   src: url(${ABCWoff2Medium}) format('woff2'),
     url(${ABCWoffMedium}) format('woff');
-    font-style: normal;
+    font-weight: 500;
     font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
   font-family: 'ABCMonumentGLight';
   src: url(${ABCWoff2Light}) format('woff2'),
     url(${ABCWoffLight}) format('woff');
-    font-style: normal;
     font-display: swap;
+    font-style: normal;
+    font-weight: 300;
 }
 
 `;
