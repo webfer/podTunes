@@ -56,7 +56,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
     --body-font-weight: 300;
     --body-line-height: 1.2;
     --body-color: #212529;
-    --body-bg-dark: #070707;
+    --body-bg-dark: #151515;
     --body-bg: #fff;
 }
 
@@ -73,6 +73,10 @@ html {
   line-height: 1.15;
 }
 body {
+
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
   background-color: ${({ theme }) => theme.backgroundColorBody};
   color: ${({ theme }) => theme.colorText};
   font-family: var(--body-font-family);
@@ -239,9 +243,18 @@ template {
 export const lightTheme = {
   backgroundColorBody: 'var(--body-bg)',
   colorText: 'var(--body-color)',
+  colorLogoDarkPink: 'var(--dark)',
+  colorLogoDarkRed: 'var(--dark)',
+  colorLogoText: 'var(--dark)',
+  colorTogleTheme: 'var(--dark)',
 };
 
 export const darkTheme = {
   backgroundColorBody: 'var( --body-bg-dark)',
   colorText: 'var(--gray-50)',
+  colorLogoDarkPink: 'var(--pink)',
+  colorLogoDarkRed: 'var(--danger)',
+  colorLogoDark: 'var(--pink)',
+  colorLogoText: 'var(--white)',
+  colorTogleTheme: 'var(--white)',
 };

@@ -1,7 +1,9 @@
+import { ThemeProvider } from 'styled-components';
+
 import { ToggleTheme } from './components';
 import { useDarkMode } from './hooks';
 import { GlobalStyle, GlobalFonts, lightTheme, darkTheme } from './styles';
-import { ThemeProvider } from 'styled-components';
+import { AppRouter } from './router';
 
 export const PodcastsApp = () => {
   const [theme, toggleTheme] = useDarkMode();
@@ -11,8 +13,7 @@ export const PodcastsApp = () => {
       <ThemeProvider theme={themeMode}>
         <GlobalFonts />
         <GlobalStyle />
-
-        <h1>Podcasts</h1>
+        <AppRouter />
         <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
       </ThemeProvider>
     </>

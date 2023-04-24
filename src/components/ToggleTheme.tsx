@@ -9,7 +9,7 @@ const WrpToggle = styled.div`
   z-index: 9;
 
   @media ${device.xxxl} {
-    top: 3.5rem;
+    top: 1.5rem;
   }
   & svg {
     cursor: pointer;
@@ -26,6 +26,8 @@ const LabelMode = styled.label`
 `;
 
 export const ToggleTheme = ({ theme, toggleTheme }: any) => {
+  // console.log(theme);
+
   return (
     <>
       <WrpToggle onClick={toggleTheme}>
