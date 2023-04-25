@@ -1,4 +1,10 @@
 import styled from 'styled-components';
+import { Entry } from '../interfaces';
+
+interface Props {
+  FilteredPodTunes: Entry[];
+  setFilterPodTunes: (podcast: string) => void;
+}
 
 const WrpFilter = styled.div`
   align-items: center;
@@ -36,13 +42,21 @@ const InputSearch = styled.input`
   width: 100%;
 `;
 
-export const FilterPodcast = () => {
+export const FilterPodcast = ({
+  FilteredPodTunes,
+  setFilterPodTunes,
+}: Props) => {
   return (
     <>
       <WrpFilter>
         <ContainerSerach>
-          <CounterPodcast>100</CounterPodcast>
-          <InputSearch placeholder="Search..." />
+          <CounterPodcast>{FilteredPodTunes?.length}</CounterPodcast>
+          <InputSearch
+            placeholder="Search..."
+            onChange={(e) => {
+              setFilterPodTunes(e.target.value);
+            }}
+          />
         </ContainerSerach>
       </WrpFilter>
     </>

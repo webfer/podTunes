@@ -3,6 +3,7 @@ import ls from 'localstorage-slim';
 
 import { HeaderComponent, FilterPodcast } from '../components';
 import { Entry } from '../interfaces';
+import { Card } from '../components/Card';
 
 let BaseUrl =
   'https://itunes.apple.com/us/rss/toppodcasts/limit=100/genre=1310/json';
@@ -30,15 +31,28 @@ export const AppHome = () => {
   const FilteredPodTunes = useMemo(() => {
     return typeof filterPodTunes === 'string' && filterPodTunes.length > 0
       ? podcasts.filter((podcasts) => {
-          return podcasts['im:name'];
+          return (
+            podcasts['im:name'].label
+              .toLowerCase()
+              .includes(filterPodTunes.toLowerCase()) ||
+            podcasts['im:artist'].label
+              .toLowerCase()
+              .includes(filterPodTunes.toLowerCase())
+          );
         })
       : podcasts;
-  }, []);
+  }, [filterPodTunes, podcasts]);
 
   return (
     <>
       <HeaderComponent />
-      <FilterPodcast />
+      <FilterPodcast
+        FilteredPodTunes={FilteredPodTunes}
+        setFilterPodTunes={setFilterPodTunes}
+      />
+      {FilteredPodTunes.map((tunes, index) => (
+        <Card podcast={tunes} />
+      ))}
       <div>AppHome</div>
     </>
   );
