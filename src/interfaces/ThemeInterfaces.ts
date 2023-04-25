@@ -5,4 +5,6 @@ export interface DefaultTheme {
   colorLogoDarkRed: string;
   colorLogoText: string;
   colorTogleTheme: string;
+  borderHeader: string;
+  backgroundButton: string;
 }

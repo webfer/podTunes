@@ -247,6 +247,8 @@ export const lightTheme = {
   colorLogoDarkRed: 'var(--dark)',
   colorLogoText: 'var(--dark)',
   colorTogleTheme: 'var(--dark)',
+  borderHeader: 'var(--gray-400)',
+  backgroundButton: 'var(--primary)',
 };
 
 export const darkTheme = {
@@ -257,4 +259,6 @@ export const darkTheme = {
   colorLogoDark: 'var(--pink)',
   colorLogoText: 'var(--white)',
   colorTogleTheme: 'var(--white)',
+  borderHeader: 'var(--gray-800)',
+  backgroundButton: 'var(--pink)',
 };

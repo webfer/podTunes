@@ -8,6 +8,7 @@ const Header = styled.header`
   float: left;
   margin: 0;
   z-index: 7;
+  border-bottom: 1px solid ${({ theme }) => theme.borderHeader};
   &:after {
     clear: both;
     content: '';
