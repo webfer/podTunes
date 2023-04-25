@@ -22,14 +22,14 @@ export interface Icon {
   label: string;
 }
 export interface Entry {
-  'im:name': string;
+  'im:name': Icon;
   'im:image': IImage[];
-  summary: string;
+  summary: Icon;
   'im:price': Price;
   'im:contentType': ImContentType;
-  rights?: string;
-  title: string;
-  link: Link;
+  rights?: Icon;
+  title: Icon;
+  link: Icon;
   id: Id;
   'im:artist': ImArtist;
   category: Category;
