@@ -4,9 +4,9 @@ import { device } from '../styles';
 
 const WrpLogo = styled(Link)`
   display: flex;
+  height: auto;
   position: relative;
   width: 10rem;
-  height: auto;
   @media ${device.md} {
     width: 15rem;
   }

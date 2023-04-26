@@ -8,22 +8,22 @@ import { Entry } from '../interfaces';
 // Styles
 const WrpCards = styled.section`
   display: flex;
-  margin: 7rem auto 0;
+  justify-content: center;
+  margin: 5rem auto 0;
   max-width: 90rem;
   position: relative;
   width: 100%;
-  justify-content: center;
 `;
 
 const ContinerCards = styled.div`
-  display: flex;
-  -webkit-display: box;
   -moz-display: box;
   -ms-display: flexbox;
+  -webkit-display: box;
   -webkit-display: flex;
+  display: flex;
   flex-wrap: wrap;
-  padding: 0;
   margin: 0;
+  padding: 0;
 `;
 
 const NoResultText = styled.h4`

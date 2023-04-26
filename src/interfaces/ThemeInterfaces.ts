@@ -1,10 +1,12 @@
 export interface DefaultTheme {
+  backgroundButton: string;
   backgroundColorBody: string;
-  colorText: string;
+  borderHeader: string;
+  colorAuthorText: string;
   colorLogoDarkPink: string;
   colorLogoDarkRed: string;
   colorLogoText: string;
+  colorText: string;
+  colorTitle: string;
   colorTogleTheme: string;
-  borderHeader: string;
-  backgroundButton: string;
 }

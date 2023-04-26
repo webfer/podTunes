@@ -249,6 +249,8 @@ export const lightTheme = {
   colorTogleTheme: 'var(--dark)',
   borderHeader: 'var(--gray-400)',
   backgroundButton: 'var(--primary)',
+  colorTitle: 'var(--gray-800)',
+  colorAuthorText: 'var(--gray-700)',
 };
 
 export const darkTheme = {
@@ -261,4 +263,6 @@ export const darkTheme = {
   colorTogleTheme: 'var(--white)',
   borderHeader: 'var(--gray-800)',
   backgroundButton: 'var(--pink)',
+  colorTitle: 'var(--gray-400)',
+  colorAuthorText: 'var(--gray-500)',
 };

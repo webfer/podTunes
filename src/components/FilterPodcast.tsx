@@ -21,28 +21,28 @@ const WrpFilter = styled.section`
 `;
 
 const ContainerSearch = styled.div`
+  align-items: center;
   column-gap: 1rem;
   display: flex;
-  margin: 1rem 0;
-  align-items: center;
-  width: 100%;
   justify-content: end;
+  margin: 3rem 0;
+  width: 100%;
 `;
 const CounterPodcast = styled.span`
-  position: relative;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
   background-color: ${({ theme }) => theme.backgroundButton};
+  border-radius: 0.5rem;
   color: var(--white);
+  padding: 0.5rem;
+  position: relative;
 `;
 const InputSearch = styled.input`
-  position: relative;
-  display: flex;
-  border: 1px solid var(--gray-300);
-  padding: 0.75rem;
   border-radius: 0.5rem;
-  width: 100%;
+  border: 1px solid var(--gray-300);
+  display: flex;
   max-width: 450px;
+  padding: 0.75rem;
+  position: relative;
+  width: 100%;
 `;
 
 export const FilterPodcast = ({

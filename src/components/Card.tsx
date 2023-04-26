@@ -8,10 +8,10 @@ interface Props {
 
 const WrpCard = styled.div`
   display: flex;
-  padding: 1rem;
   margin-bottom: 6rem;
-  width: 100%;
   min-width: 360px;
+  padding: 1rem;
+  width: 100%;
   @media ${device.lg} {
     width: 50%;
   }
@@ -24,37 +24,39 @@ const WrpCard = styled.div`
 `;
 
 const CardItem = styled.div`
-  border: 1px solid ${({ theme }) => theme.borderHeader};
-
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  border-radius: 5px;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  transition: transform 0.5s;
   -webkit-transition: transform 0.5s;
   align-items: center;
+  border-radius: 5px;
+  border: 1px solid ${({ theme }) => theme.borderHeader};
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s;
+  width: 100%;
 `;
 
 const CardInfo = styled.div`
   display: flex;
-  flex: 1 1 auto;
   flex-direction: column;
-  padding: 1rem;
+  flex: 1 1 auto;
   line-height: 1.5em;
+  padding: 1rem;
 `;
 
 const WrpImg = styled.div`
-  width: 8rem;
   height: 8rem;
   margin-bottom: 1rem;
   margin-top: -4rem;
+  width: 8rem;
 `;
 
 const TitleCard = styled.h4`
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: ${({ theme }) => theme.colorTitle};
+  display: -webkit-box;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   overflow: hidden;
   text-overflow: ellipsis;
 `;
@@ -67,7 +69,12 @@ const Img = styled.img`
   width: 100%;
 `;
 
-const Author = styled.p``;
+const Author = styled.p`
+  color: ${({ theme }) => theme.colorAuthorText};
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 1rem 0;
+`;
 
 export const Card = ({ podcast }: Props) => {
   return (
