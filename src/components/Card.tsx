@@ -6,6 +6,7 @@ interface Props {
   podcast: Entry;
 }
 
+// Styles
 const WrpCard = styled.div`
   display: flex;
   margin-bottom: 6rem;
@@ -81,6 +82,7 @@ const Author = styled.p`
   margin: 1rem 0;
 `;
 
+// Main card
 export const Card = ({ podcast }: Props) => {
   return (
     <>

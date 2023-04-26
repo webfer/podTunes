@@ -1,3 +1,4 @@
+// Theme's interface
 export interface DefaultTheme {
   backgroundButton: string;
   backgroundColorBody: string;
