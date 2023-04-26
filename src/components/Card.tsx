@@ -10,7 +10,7 @@ interface Props {
 // Styles
 const WrpCard = styled.div`
   display: flex;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   min-width: 360px;
   padding: 1rem;
   width: 100%;
@@ -35,6 +35,7 @@ const CardItem = styled.div`
   flex-direction: column;
   transition: transform 0.5s;
   width: 100%;
+  padding: 2rem 2rem 1.5rem;
   &:hover {
     cursor: pointer;
     transform: scale(1.1);
@@ -47,14 +48,14 @@ const CardInfo = styled.div`
   flex-direction: column;
   flex: 1 1 auto;
   line-height: 1.5em;
-  padding: 1rem;
+  width: 100%;
 `;
 
 const WrpImg = styled.div`
-  height: 8rem;
+  height: 6rem;
   margin-bottom: 1rem;
-  margin-top: -4rem;
-  width: 8rem;
+  margin-top: -5rem;
+  width: 6rem;
 `;
 
 const TitleCard = styled.h4`
@@ -66,6 +67,7 @@ const TitleCard = styled.h4`
   line-height: 1.75rem;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: center;
 `;
 const Img = styled.img`
   border-radius: 50%;
@@ -80,7 +82,8 @@ const Author = styled.p`
   color: ${({ theme }) => theme.colorAuthorText};
   font-size: 1rem;
   line-height: 1.5rem;
-  margin: 1rem 0;
+  text-align: center;
+  margin-top: auto;
 `;
 
 // Main card
