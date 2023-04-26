@@ -94,7 +94,7 @@ a{
 
 h1,h2,h3,h4,h5,h6{
    color: ${({ theme }) => theme.colorText};
-   font-family: 'ABCMonumentGLight', Arial, Helvetica, sans-serif;
+   font-family: 'ABCMonumentGMedium', Arial, Helvetica, sans-serif;
 }
 
 

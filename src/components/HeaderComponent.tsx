@@ -5,7 +5,6 @@ const Header = styled.header`
   display: block;
   position: relative;
   width: 100%;
-  float: left;
   margin: 0;
   z-index: 7;
   border-bottom: 1px solid ${({ theme }) => theme.borderHeader};

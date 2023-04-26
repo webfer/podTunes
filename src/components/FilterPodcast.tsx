@@ -6,25 +6,27 @@ interface Props {
   setFilterPodTunes: (podcast: string) => void;
 }
 
-const WrpFilter = styled.div`
-  align-items: center;
+const WrpFilter = styled.section`
   display: flex;
-  left: 50%;
-  margin: 0;
+  margin: 0 auto;
   max-width: 90rem;
-  padding: 0 1.75rem;
+  padding: 0px 1rem;
   position: relative;
-  transform: translateX(-50%);
   width: 100%;
-  justify-content: end;
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 `;
-const ContainerSerach = styled.div`
+
+const ContainerSearch = styled.div`
   column-gap: 1rem;
   display: flex;
   margin: 1rem 0;
   align-items: center;
   width: 100%;
-  max-width: 450px;
+  justify-content: end;
 `;
 const CounterPodcast = styled.span`
   position: relative;
@@ -40,6 +42,7 @@ const InputSearch = styled.input`
   padding: 0.75rem;
   border-radius: 0.5rem;
   width: 100%;
+  max-width: 450px;
 `;
 
 export const FilterPodcast = ({
@@ -49,15 +52,15 @@ export const FilterPodcast = ({
   return (
     <>
       <WrpFilter>
-        <ContainerSerach>
+        <ContainerSearch>
           <CounterPodcast>{FilteredPodTunes?.length}</CounterPodcast>
           <InputSearch
-            placeholder="Search..."
-            onChange={(e) => {
-              setFilterPodTunes(e.target.value);
+            placeholder="Search your podcast..."
+            onChange={({ target }) => {
+              setFilterPodTunes(target.value);
             }}
           />
-        </ContainerSerach>
+        </ContainerSearch>
       </WrpFilter>
     </>
   );

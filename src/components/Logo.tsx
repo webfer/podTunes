@@ -1,11 +1,15 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { device } from '../styles';
 
 const WrpLogo = styled(Link)`
   display: flex;
   position: relative;
-  width: 15rem;
+  width: 10rem;
   height: auto;
+  @media ${device.md} {
+    width: 15rem;
+  }
   svg {
     padding: 1rem 0;
     .st0 {
