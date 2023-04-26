@@ -33,6 +33,11 @@ const CardItem = styled.div`
   flex-direction: column;
   transition: transform 0.5s;
   width: 100%;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+  }
 `;
 
 const CardInfo = styled.div`
