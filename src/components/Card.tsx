@@ -4,6 +4,7 @@ import { device } from '../styles';
 
 interface Props {
   podcast: Entry;
+  navigate: (path: string, state?: any) => void;
 }
 
 // Styles
@@ -83,10 +84,18 @@ const Author = styled.p`
 `;
 
 // Main card
-export const Card = ({ podcast }: Props) => {
+export const Card = ({ podcast, navigate }: Props) => {
   return (
     <>
-      <WrpCard>
+      <WrpCard
+        onClick={() => {
+          navigate(`/podcast/${podcast.id.attributes['im:id']}`, {
+            state: {
+              podcast,
+            },
+          });
+        }}
+      >
         <CardItem>
           <WrpImg>
             <Img
