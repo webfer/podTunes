@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import styled from 'styled-components';
 import ls from 'localstorage-slim';
 
-import { HeaderComponent, FilterPodTunes, Card } from '../components';
+import { HeaderComponent, FilterPodtunes, Card } from '.';
 import { Entry } from '../interfaces';
 import { useNavigate } from 'react-router-dom';
 
@@ -38,58 +38,58 @@ const BaseUrl =
 // Encrypt data on localstorage in order to protect data
 ls.config.encrypt = true;
 
-export const PodTunesList = () => {
-  const [podTunes, setPodTunes] = useState<Entry[]>([]);
-  const [filterPodTunes, setFilterPodTunes] = useState<string | null>(null);
+export const PodtunesList = () => {
+  const [podtunes, setPodtunes] = useState<Entry[]>([]);
+  const [filterPodtunes, setFilterPodtunes] = useState<string | null>(null);
 
   const Navigate = useNavigate();
 
   // function to retrieve  by filter input and show data on the podcast lists
-  const FilteredPodTunes = useMemo(() => {
-    return typeof filterPodTunes === 'string' && filterPodTunes.length > 0
-      ? podTunes.filter((podTunes) => {
+  const FilteredPodtunes = useMemo(() => {
+    return typeof filterPodtunes === 'string' && filterPodtunes.length > 0
+      ? podtunes.filter((podtunes) => {
           return (
-            podTunes['im:name'].label
+            podtunes['im:name'].label
               .toLowerCase()
-              .includes(filterPodTunes.toLowerCase()) ||
-            podTunes['im:artist'].label
+              .includes(filterPodtunes.toLowerCase()) ||
+            podtunes['im:artist'].label
               .toLowerCase()
-              .includes(filterPodTunes.toLowerCase())
+              .includes(filterPodtunes.toLowerCase())
           );
         })
-      : podTunes;
-  }, [filterPodTunes, podTunes]);
+      : podtunes;
+  }, [filterPodtunes, podtunes]);
 
   useEffect(() => {
     // validate if there is data on localStorage, if there isn't save it on localstorage
-    ls.get('PodTunes') === null
+    ls.get('Podtunes') === null
       ? fetch(BaseUrl)
           .then(async (response) => await response.json())
           .then((response) => {
-            setPodTunes(response.feed.entry);
+            setPodtunes(response.feed.entry);
             // save podcast in localstorage just for 1 day (86400)
-            ls.set('PodTunes', response.feed.entry, { ttl: 86400 });
+            ls.set('Podtunes', response.feed.entry, { ttl: 86400 });
           })
           .catch((err) => {
             // catch error if it is generated
             console.log('Error fetching data: ', err);
           })
       : // if there is data set podcast
-        setPodTunes(ls.get('PodTunes') as React.SetStateAction<Entry[]>);
+        setPodtunes(ls.get('Podtunes') as React.SetStateAction<Entry[]>);
   }, []);
   return (
     <>
       <HeaderComponent />
-      <FilterPodTunes
-        FilteredPodTunes={FilteredPodTunes}
-        setFilterPodTunes={setFilterPodTunes}
+      <FilterPodtunes
+        FilteredPodtunes={FilteredPodtunes}
+        setFilterPodtunes={setFilterPodtunes}
       />
       <WrpCards>
         <ContinerCards>
-          {FilteredPodTunes?.length > 0 ? (
+          {FilteredPodtunes?.length > 0 ? (
             // Map every podcast
-            FilteredPodTunes.map((pods, ind) => (
-              <Card podTunes={pods} key={ind} navigate={Navigate} />
+            FilteredPodtunes.map((pods, ind) => (
+              <Card podtunes={pods} key={ind} navigate={Navigate} />
             ))
           ) : (
             // If your search didn't yield any results, show a message on the screen

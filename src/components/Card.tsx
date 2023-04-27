@@ -3,7 +3,7 @@ import { Entry } from '../interfaces';
 import { device } from '../styles';
 
 interface Props {
-  podTunes: Entry;
+  podtunes: Entry;
   navigate: (path: string, state?: any) => void;
 }
 
@@ -87,14 +87,14 @@ const Author = styled.p`
 `;
 
 // Main card
-export const Card = ({ podTunes, navigate }: Props) => {
+export const Card = ({ podtunes, navigate }: Props) => {
   return (
     <>
       <WrpCard
         onClick={() => {
-          navigate(`/podcast/${podTunes.id.attributes['im:id']}`, {
+          navigate(`/podcast/${podtunes.id.attributes['im:id']}`, {
             state: {
-              podTunes,
+              podtunes,
             },
           });
         }}
@@ -102,13 +102,13 @@ export const Card = ({ podTunes, navigate }: Props) => {
         <CardItem>
           <WrpImg>
             <Img
-              src={podTunes['im:image'][2].label}
-              alt={podTunes['im:name'].label}
+              src={podtunes['im:image'][2].label}
+              alt={podtunes['im:name'].label}
             />
           </WrpImg>
           <CardInfo>
-            <TitleCard>{podTunes.title.label}</TitleCard>
-            <Author>Author: {podTunes['im:artist'].label}</Author>
+            <TitleCard>{podtunes.title.label}</TitleCard>
+            <Author>Author: {podtunes['im:artist'].label}</Author>
           </CardInfo>
         </CardItem>
       </WrpCard>

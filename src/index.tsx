@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
-import { PodTunesApp } from './PodTunesApp';
+import { PodtunesApp } from './PodtunesApp';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <PodTunesApp />
+      <PodtunesApp />
     </BrowserRouter>
   </React.StrictMode>
 );

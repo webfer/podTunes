@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { AsidePodTunes, HeaderComponent } from '../components';
+import { AsidePodtunes, HeaderComponent } from '../components';
 
 const WrpDetail = styled.section`
   display: flex;
@@ -16,15 +16,15 @@ const ContainerTunes = styled.div`
   flex-direction: row;
   gap: 2.5rem;
 `;
-export const AppPodTunesDetail = () => {
+export const AppPodtunesDetail = () => {
   return (
     <>
       <HeaderComponent />
 
       <WrpDetail>
         <ContainerTunes>
-          <AsidePodTunes />
-          <h2>PodTunesDetail</h2>
+          <AsidePodtunes />
+          <h2>PodtunesDetail</h2>
         </ContainerTunes>
       </WrpDetail>
     </>

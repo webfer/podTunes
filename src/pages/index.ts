@@ -1,3 +1,3 @@
 export * from './AppEpisodeDetail';
-export * from './AppPodTunesDetail';
+export * from './AppPodtunesDetail';
 export * from './AppHome';

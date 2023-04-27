@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import { PodTunesApp } from './PodTunesApp';
+import { PodtunesApp } from './PodtunesApp';
 
 test('renders learn react link', () => {
-  render(<PodTunesApp />);
+  render(<PodtunesApp />);
   const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });

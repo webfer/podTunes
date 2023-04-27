@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import { AppEpisodeDetail, AppHome, AppPodTunesDetail } from '../pages';
+import { AppEpisodeDetail, AppHome, AppPodtunesDetail } from '../pages';
 
 export const AppRouter = () => {
   return (
@@ -8,7 +8,7 @@ export const AppRouter = () => {
       <Routes>
         <Route path="home/*" element={<AppHome />} />
         <Route path="/episode" element={<AppEpisodeDetail />} />
-        <Route path="podcast/:podcastId" element={<AppPodTunesDetail />} />
+        <Route path="podcast/:podcastId" element={<AppPodtunesDetail />} />
 
         <Route path="/" element={<Navigate to="/home" />} />
       </Routes>

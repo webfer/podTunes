@@ -1,9 +1,9 @@
-import { PodTunesList } from '../components';
+import { PodtunesList } from '../components';
 
 export const AppHome = () => {
   return (
     <>
-      <PodTunesList />
+      <PodtunesList />
     </>
   );
 };

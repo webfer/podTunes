@@ -5,7 +5,7 @@ import { useDarkMode } from './hooks';
 import { GlobalStyle, GlobalFonts, lightTheme, darkTheme } from './styles';
 import { AppRouter } from './router';
 
-export const PodTunesApp = () => {
+export const PodtunesApp = () => {
   const [theme, toggleTheme] = useDarkMode();
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
   return (

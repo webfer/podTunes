@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Result } from '../interfaces';
 
-const WrpAsidePodTunes = styled.div`
+const WrpAsidePodtunes = styled.div`
   display: flex;
   max-width: 20rem;
   flex-direction: column;
@@ -17,12 +17,12 @@ interface Props {
   podTunes: Result[];
 }
 
-export const AsidePodTunes = () => {
+export const AsidePodtunes = () => {
   return (
     <>
-      <WrpAsidePodTunes>
+      <WrpAsidePodtunes>
         <h1>AsidePodTunes</h1>
-      </WrpAsidePodTunes>
+      </WrpAsidePodtunes>
     </>
   );
 };

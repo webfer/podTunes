@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { Entry } from '../interfaces';
 
 interface Props {
-  FilteredPodTunes: Entry[];
-  setFilterPodTunes: (podcast: string) => void;
+  FilteredPodtunes: Entry[];
+  setFilterPodtunes: (podcast: string) => void;
 }
 
 const WrpFilter = styled.section`
@@ -45,19 +45,19 @@ const InputSearch = styled.input`
   width: 100%;
 `;
 
-export const FilterPodTunes = ({
-  FilteredPodTunes,
-  setFilterPodTunes,
+export const FilterPodtunes = ({
+  FilteredPodtunes,
+  setFilterPodtunes,
 }: Props) => {
   return (
     <>
       <WrpFilter>
         <ContainerSearch>
-          <CounterPodcast>{FilteredPodTunes?.length}</CounterPodcast>
+          <CounterPodcast>{FilteredPodtunes?.length}</CounterPodcast>
           <InputSearch
-            placeholder="Search your podTunes..."
+            placeholder="Search your podtunes..."
             onChange={({ target }) => {
-              setFilterPodTunes(target.value);
+              setFilterPodtunes(target.value);
             }}
           />
         </ContainerSearch>
