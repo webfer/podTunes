@@ -45,7 +45,7 @@ const InputSearch = styled.input`
   width: 100%;
 `;
 
-export const FilterPodcast = ({
+export const FilterPodTunes = ({
   FilteredPodTunes,
   setFilterPodTunes,
 }: Props) => {
@@ -55,7 +55,7 @@ export const FilterPodcast = ({
         <ContainerSearch>
           <CounterPodcast>{FilteredPodTunes?.length}</CounterPodcast>
           <InputSearch
-            placeholder="Search your podcast..."
+            placeholder="Search your podTunes..."
             onChange={({ target }) => {
               setFilterPodTunes(target.value);
             }}

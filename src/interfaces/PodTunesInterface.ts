@@ -83,7 +83,7 @@ export interface ImContentTypeAttributes {
 }
 
 export enum TermPlusLevel {
-  Podcast = 'Podcast',
+  PodTunes = 'Podcast',
 }
 export interface IImage {
   label: string;
@@ -134,7 +134,7 @@ export enum Type {
   TextHTML = 'text/html',
 }
 
-export interface PodcastDetail {
+export interface PodTunesDetail {
   resultCount: number;
   results: Result[];
 }
@@ -213,11 +213,11 @@ export enum PrimaryGenreNameEnum {
 }
 
 export enum Kind {
-  Podcast = 'podcast',
-  PodcastEpisode = 'podcast-episode',
+  PodTunes = 'podcast',
+  PodTunesEpisode = 'podcast-episode',
 }
 
 export enum WrapperType {
-  PodcastEpisode = 'podcastEpisode',
+  PodTunesEpisode = 'podcastEpisode',
   Track = 'track',
 }

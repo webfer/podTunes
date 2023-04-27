@@ -14,14 +14,14 @@ const WrpAsidePodTunes = styled.div`
 `;
 
 interface Props {
-  podcast: Result[];
+  podTunes: Result[];
 }
 
 export const AsidePodTunes = () => {
   return (
     <>
       <WrpAsidePodTunes>
-        <h1>AsidePodcast</h1>
+        <h1>AsidePodTunes</h1>
       </WrpAsidePodTunes>
     </>
   );

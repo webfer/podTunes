@@ -24,7 +24,7 @@ export const AppPodTunesDetail = () => {
       <WrpDetail>
         <ContainerTunes>
           <AsidePodTunes />
-          <h2>PodcastDetail</h2>
+          <h2>PodTunesDetail</h2>
         </ContainerTunes>
       </WrpDetail>
     </>

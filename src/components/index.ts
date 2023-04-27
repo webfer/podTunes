@@ -1,5 +1,5 @@
 export * from './Card';
-export * from './FilterPodcast';
+export * from './FilterPodTunes';
 export * from './HeaderComponent';
 export * from './Logo';
 export * from './NavBarComponent';
