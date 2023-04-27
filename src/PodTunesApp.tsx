@@ -11,7 +11,7 @@ export const PodtunesApp = () => {
   return (
     <>
       <ThemeProvider theme={themeMode}>
-        <GlobalFonts />
+        {/* <GlobalFonts /> */}
         <GlobalStyle />
         <AppRouter />
         <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
