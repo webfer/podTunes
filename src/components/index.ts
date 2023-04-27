@@ -5,3 +5,4 @@ export * from './Logo';
 export * from './NavBarComponent';
 export * from './ToggleTheme';
 export * from './PodTunesList';
+export * from './AsidePodTunes';
