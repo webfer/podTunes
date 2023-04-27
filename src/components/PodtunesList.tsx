@@ -17,14 +17,11 @@ const WrpCards = styled.section`
 `;
 
 const ContinerCards = styled.div`
-  -moz-display: box;
-  -ms-display: flexbox;
-  -webkit-display: box;
-  -webkit-display: flex;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  width: 100%;
 `;
 
 const NoResultText = styled.h4`
