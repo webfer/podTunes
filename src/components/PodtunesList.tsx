@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import styled from 'styled-components';
 import ls from 'localstorage-slim';
 
-import { HeaderComponent, FilterPodtunes, Card } from '.';
+import { HeaderComponent, FilterPodtunes, CardList } from '.';
 import { Entry } from '../interfaces';
 import { useNavigate } from 'react-router-dom';
 
@@ -59,20 +59,20 @@ export const PodtunesList = () => {
 
   useEffect(() => {
     // validate if there is data on localStorage, if there isn't save it on localstorage
-    ls.get('Podtunes') === null
+    ls.get('podtunes') === null
       ? fetch(BaseUrl)
           .then(async (response) => await response.json())
           .then((response) => {
             setPodtunes(response.feed.entry);
             // save podcast in localstorage just for 1 day (86400)
-            ls.set('Podtunes', response.feed.entry, { ttl: 86400 });
+            ls.set('podtunes', response.feed.entry, { ttl: 86400 });
           })
           .catch((err) => {
             // catch error if it is generated
             console.log('Error fetching data: ', err);
           })
       : // if there is data set podcast
-        setPodtunes(ls.get('Podtunes') as React.SetStateAction<Entry[]>);
+        setPodtunes(ls.get('podtunes') as React.SetStateAction<Entry[]>);
   }, []);
   return (
     <>
@@ -86,7 +86,7 @@ export const PodtunesList = () => {
           {FilteredPodtunes?.length > 0 ? (
             // Map every podcast
             FilteredPodtunes.map((pods, ind) => (
-              <Card podtunes={pods} key={ind} navigate={Navigate} />
+              <CardList tune={pods} key={ind} navigate={Navigate} />
             ))
           ) : (
             // If your search didn't yield any results, show a message on the screen

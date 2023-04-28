@@ -1,4 +1,4 @@
-export * from './Card';
+export * from './CardList';
 export * from './FilterPodtunes';
 export * from './HeaderComponent';
 export * from './Logo';

@@ -14,14 +14,21 @@ const WrpAsidePodtunes = styled.div`
 `;
 
 interface Props {
-  podTunes: Result[];
+  tune: Result[];
+  podtunesInfo: any;
 }
 
-export const AsidePodtunes = () => {
+export const AsidePodtunes = ({ tune, podtunesInfo }: Props) => {
   return (
     <>
       <WrpAsidePodtunes>
-        <h1>AsidePodTunes</h1>
+        {tune !== undefined ? (
+          <img src={tune[0].artworkUrl600} alt={tune[0].collectionName} />
+        ) : (
+          <h2>Hello</h2>
+        )}
+
+        <h1>AsidePodtunes</h1>
       </WrpAsidePodtunes>
     </>
   );
