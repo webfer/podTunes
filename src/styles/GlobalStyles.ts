@@ -251,6 +251,7 @@ export const lightTheme = {
   backgroundButton: 'var(--primary)',
   colorTitle: 'var(--gray-800)',
   colorAuthorText: 'var(--gray-700)',
+  colorBorderAvatar: 'var(--gray-500)',
 };
 
 export const darkTheme = {
@@ -265,4 +266,5 @@ export const darkTheme = {
   backgroundButton: 'var(--pink)',
   colorTitle: 'var(--gray-400)',
   colorAuthorText: 'var(--gray-500)',
+  colorBorderAvatar: 'var(--gray-800)',
 };

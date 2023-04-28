@@ -76,6 +76,7 @@ const Img = styled.img`
   display: block;
   position: relative;
   width: 100%;
+  border: 1px solid ${({ theme }) => theme.colorBorderAvatar};
 `;
 
 const Author = styled.p`

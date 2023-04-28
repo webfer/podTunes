@@ -10,4 +10,5 @@ export interface DefaultTheme {
   colorText: string;
   colorTitle: string;
   colorTogleTheme: string;
+  colorBorderAvatar: string;
 }
