@@ -10,25 +10,76 @@ const WrpAsidePodtunes = styled.div`
   justify-content: center;
   padding: 1.25rem;
   border: 1px solid ${({ theme }) => theme.borderHeader};
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  /*box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25); */
+
+  box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.14);
+  /* border: 1px solid rgba(0, 0, 0, 0); */
+  border-radius: 4px;
+`;
+
+const ImgCardAside = styled.img`
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  min-width: 150px;
+  max-width: 200px;
+`;
+
+const WrpInfoAside = styled.div`
+  margin: 2rem 0;
+  border-top: 1px solid ${({ theme }) => theme.borderHeader};
+  border-bottom: 1px solid ${({ theme }) => theme.borderHeader};
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  padding: 1rem 0;
+  flex-flow: column wrap;
+  flex: 1 1 auto;
+`;
+
+const AsideInfoTitle = styled.h4`
+  padding: 0.5rem 0;
+  width: 100%;
+`;
+const AsideInfoAuthor = styled.span`
+  font-style: italic;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+const DescriptionAside = styled.p`
+  font-style: italic;
 `;
 
 interface Props {
   tune: Result[];
-  podtunesInfo: any;
+  podtuneInfo: any;
 }
 
-export const AsidePodtunes = ({ tune, podtunesInfo }: Props) => {
+export const AsidePodtunes = ({ tune, podtuneInfo }: Props) => {
   return (
     <>
       <WrpAsidePodtunes>
         {tune !== undefined ? (
-          <img src={tune[0].artworkUrl600} alt={tune[0].collectionName} />
+          <>
+            <ImgCardAside
+              src={tune[0].artworkUrl600}
+              alt={tune[0].collectionName}
+            />
+            <WrpInfoAside>
+              <AsideInfoTitle>{tune[0].collectionName}</AsideInfoTitle>
+              <AsideInfoAuthor>by {tune[0].artistName}</AsideInfoAuthor>
+            </WrpInfoAside>
+            <AsideInfoTitle>Description:</AsideInfoTitle>
+            <DescriptionAside>{podtuneInfo?.summary.label}</DescriptionAside>
+          </>
         ) : (
           <h2>Hello</h2>
         )}
-
-        <h1>AsidePodtunes</h1>
       </WrpAsidePodtunes>
     </>
   );

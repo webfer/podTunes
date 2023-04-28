@@ -10,7 +10,7 @@ const WrpDetail = styled.section`
   display: flex;
   margin: 0px auto;
   max-width: 90rem;
-  padding: 0px 1rem;
+  padding: 5rem 1rem 0;
   position: relative;
   width: 100%;
 `;
@@ -65,7 +65,7 @@ export const AppPodtunesDetail = () => {
       <WrpDetail>
         <ContainerTunes>
           {tune != null && tune.length > 0 ? (
-            <AsidePodtunes tune={tune} podtunesInfo={tuneInfo} />
+            <AsidePodtunes tune={tune} podtuneInfo={tuneInfo} />
           ) : (
             <h1>Hello!!!</h1>
           )}
