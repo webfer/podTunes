@@ -23,6 +23,11 @@ const ImgCardAside = styled.img`
   border-radius: 0.5rem;
   min-width: 150px;
   max-width: 200px;
+  transition: transform 0.5s;
+  &:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+  }
 `;
 
 const WrpInfoAside = styled.div`
@@ -53,6 +58,8 @@ const AsideInfoAuthor = styled.span`
 `;
 const DescriptionAside = styled.p`
   font-style: italic;
+  width: 100%;
+  overflow-wrap: break-word;
 `;
 
 interface Props {

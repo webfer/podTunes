@@ -44,7 +44,9 @@ export const AppPodtunesDetail = () => {
         })
         .then(async (data) => {
           setTune(JSON.parse(data.contents).results);
-          ls.set(`${tuneId}`, JSON.parse(data.contents).results);
+          ls.set(`${tuneId}`, JSON.parse(data.contents).results, {
+            ttl: 86400,
+          });
         })
         .catch((err) => {
           console.log(err);
