@@ -10,10 +10,7 @@ const WrpAsidePodtunes = styled.div`
   justify-content: center;
   padding: 1.25rem;
   border: 1px solid ${({ theme }) => theme.borderHeader};
-  /*box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25); */
-
   box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.14);
-  /* border: 1px solid rgba(0, 0, 0, 0); */
   border-radius: 4px;
 `;
 

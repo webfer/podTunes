@@ -237,7 +237,9 @@ template {
 [hidden] {
   display: none;
 }
-
+th{
+  font-family: 'ABCMonumentGMedium', Arial, Helvetica, sans-serif;
+}
 `;
 
 export const lightTheme = {

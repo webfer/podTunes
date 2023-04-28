@@ -6,3 +6,4 @@ export * from './NavBarComponent';
 export * from './ToggleTheme';
 export * from './PodtunesList';
 export * from './AsidePodtunes';
+export * from './ChapterList';

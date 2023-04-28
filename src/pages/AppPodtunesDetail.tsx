@@ -3,14 +3,14 @@ import { useEffect, useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import ls from 'localstorage-slim';
 
-import { AsidePodtunes, HeaderComponent } from '../components';
+import { AsidePodtunes, ChapterList, HeaderComponent } from '../components';
 import { Entry, Result } from '../interfaces';
 
 const WrpDetail = styled.section`
   display: flex;
-  margin: 0px auto;
+  margin: 5rem auto 0;
   max-width: 90rem;
-  padding: 5rem 1rem 0;
+  padding: 0 1rem;
   position: relative;
   width: 100%;
 `;
@@ -19,7 +19,7 @@ const ContainerTunes = styled.div`
   display: flex;
   flex: 1 1;
   flex-direction: row;
-  gap: 2.5rem;
+  gap: 4rem;
 `;
 export const AppPodtunesDetail = () => {
   const [tune, setTune] = useState<Result[]>();
@@ -67,12 +67,13 @@ export const AppPodtunesDetail = () => {
       <WrpDetail>
         <ContainerTunes>
           {tune != null && tune.length > 0 ? (
-            <AsidePodtunes tune={tune} podtuneInfo={tuneInfo} />
+            <>
+              <AsidePodtunes tune={tune} podtuneInfo={tuneInfo} />
+              <ChapterList tune={tune} />
+            </>
           ) : (
             <h1>Hello!!!</h1>
           )}
-
-          <h2>PodtunesDetail</h2>
         </ContainerTunes>
       </WrpDetail>
     </>
