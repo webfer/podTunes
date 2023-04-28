@@ -50,7 +50,7 @@ export const AppPodtunesDetail = () => {
           console.log(err);
         });
     } else {
-      setTune(JSON.parse(ls.get(`${tuneId}`)!));
+      setTune(ls.get(`${tuneId}`)!);
     }
   }, [tuneId]);
 
