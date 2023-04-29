@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+
 import { Result } from '../../../interfaces';
 import { device } from '../../../styles';
+import { Chapter, ChapterPlayer } from '.';
 
-const WrpAsidePodtunes = styled.div`
+const WrpAsideTunes = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -65,15 +67,26 @@ const DescriptionAside = styled.p`
 
 interface Props {
   tune: Result[];
-  podtuneInfo: any;
+  setSelectChapter: (episode: Result) => void;
+  tuneInfo: any;
+  selectChapter: Result | undefined;
+  tuneId: string | undefined;
+  navigate: (path: string) => void;
 }
 
-export const AsideTunes = ({ tune, podtuneInfo }: Props) => {
+export const Aside = ({
+  tune,
+  tuneInfo,
+  selectChapter,
+  tuneId,
+  setSelectChapter,
+  navigate,
+}: Props) => {
   return (
     <>
-      <WrpAsidePodtunes>
-        {tune !== undefined ? (
-          <>
+      {tune !== undefined ? (
+        <>
+          <WrpAsideTunes>
             <ImgCardAside
               src={tune[0].artworkUrl600}
               alt={tune[0].collectionName}
@@ -83,12 +96,22 @@ export const AsideTunes = ({ tune, podtuneInfo }: Props) => {
               <AsideInfoAuthor>by {tune[0].artistName}</AsideInfoAuthor>
             </WrpInfoAside>
             <AsideInfoTitle>Description:</AsideInfoTitle>
-            <DescriptionAside>{podtuneInfo?.summary.label}</DescriptionAside>
-          </>
-        ) : (
-          <h2>Hello</h2>
-        )}
-      </WrpAsidePodtunes>
+            <DescriptionAside>{tuneInfo?.summary.label}</DescriptionAside>
+          </WrpAsideTunes>
+          {selectChapter == null ? (
+            <Chapter
+              tune={tune}
+              setSelectChapter={setSelectChapter}
+              tuneId={tuneId}
+              navigate={navigate}
+            />
+          ) : (
+            <ChapterPlayer selectChapter={selectChapter} />
+          )}
+        </>
+      ) : (
+        <h2>Hello</h2>
+      )}
     </>
   );
 };

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { Result } from '../../../interfaces';
-import { formatTime } from '../../../helpers/formatTime';
 import { device } from '../../../styles';
+import { type Result } from '../../../interfaces';
+import { formatTime } from '../../../helpers/formatTime';
 
 const WrpChapterList = styled.div`
   margin: 5rem 0 0;
@@ -74,7 +74,13 @@ interface Props {
   tuneId: string | undefined;
   navigate: (path: string) => void;
 }
-export const ChapterList = ({ tune, setSelectChapter, navigate }: Props) => {
+
+export const Chapter = ({
+  tune,
+  setSelectChapter,
+  tuneId,
+  navigate,
+}: Props) => {
   return (
     <>
       <WrpChapterList>
@@ -90,7 +96,7 @@ export const ChapterList = ({ tune, setSelectChapter, navigate }: Props) => {
             </tr>
           </thead>
           <tbody>
-            {tune.slice(1).map((chapter, index, tuneId) => {
+            {tune.slice(1).map((chapter, index) => {
               return (
                 <tr
                   key={index}
