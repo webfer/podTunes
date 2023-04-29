@@ -254,6 +254,7 @@ export const lightTheme = {
   colorTitle: 'var(--gray-800)',
   colorAuthorText: 'var(--gray-700)',
   colorBorderAvatar: 'var(--gray-500)',
+  backgroundChapterList: 'var(--gray-200)',
 };
 
 export const darkTheme = {
@@ -269,4 +270,5 @@ export const darkTheme = {
   colorTitle: 'var(--gray-400)',
   colorAuthorText: 'var(--gray-500)',
   colorBorderAvatar: 'var(--gray-800)',
+  backgroundChapterList: 'var(--gray-900)',
 };

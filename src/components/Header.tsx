@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { NavBarComponent } from '.';
+import { NavBar } from '.';
 
-const Header = styled.header`
+const HeaderHtml = styled.header`
   display: block;
   margin: 0;
   position: relative;
@@ -15,12 +15,12 @@ const Header = styled.header`
   }
 `;
 
-export const HeaderComponent = () => {
+export const Header = () => {
   return (
     <>
-      <Header>
-        <NavBarComponent />
-      </Header>
+      <HeaderHtml>
+        <NavBar />
+      </HeaderHtml>
     </>
   );
 };

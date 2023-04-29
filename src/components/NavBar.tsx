@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Logo } from './Logo';
 
-const NavBar = styled.nav`
+const NavBarHtml = styled.nav`
   align-items: center;
   display: flex;
   left: 50%;
@@ -14,12 +14,12 @@ const NavBar = styled.nav`
   z-index: 2;
 `;
 
-export const NavBarComponent = () => {
+export const NavBar = () => {
   return (
     <>
-      <NavBar>
+      <NavBarHtml>
         <Logo />
-      </NavBar>
+      </NavBarHtml>
     </>
   );
 };

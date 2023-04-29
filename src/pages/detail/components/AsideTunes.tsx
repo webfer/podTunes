@@ -1,17 +1,21 @@
 import styled from 'styled-components';
-import { Result } from '../interfaces';
+import { Result } from '../../../interfaces';
+import { device } from '../../../styles';
 
 const WrpAsidePodtunes = styled.div`
   display: flex;
-  max-width: 20rem;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   border-radius: 0.5rem;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 1.25rem;
   border: 1px solid ${({ theme }) => theme.borderHeader};
   box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.14);
   border-radius: 4px;
+  @media ${device.lg} {
+    max-width: 22rem;
+  }
 `;
 
 const ImgCardAside = styled.img`
@@ -36,7 +40,7 @@ const WrpInfoAside = styled.div`
   justify-content: start;
   padding: 1rem 0;
   flex-flow: column wrap;
-  flex: 1 1 auto;
+  /* flex: 1 1 auto; */
 `;
 
 const AsideInfoTitle = styled.h4`
@@ -64,7 +68,7 @@ interface Props {
   podtuneInfo: any;
 }
 
-export const AsidePodtunes = ({ tune, podtuneInfo }: Props) => {
+export const AsideTunes = ({ tune, podtuneInfo }: Props) => {
   return (
     <>
       <WrpAsidePodtunes>

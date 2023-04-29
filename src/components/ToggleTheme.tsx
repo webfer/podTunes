@@ -26,8 +26,6 @@ const LabelMode = styled.label`
 `;
 
 export const ToggleTheme = ({ theme, toggleTheme }: any) => {
-  // console.log(theme);
-
   return (
     <>
       <WrpToggle onClick={toggleTheme}>

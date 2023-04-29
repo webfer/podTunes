@@ -1,3 +1,3 @@
-export * from './AppEpisodeDetail';
-export * from './AppPodtunesDetail';
-export * from './AppHome';
+export * from './chapter/AppChapter';
+export * from './detail/AppDetail';
+export * from './search/AppSearch';

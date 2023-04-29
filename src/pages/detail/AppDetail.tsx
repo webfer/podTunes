@@ -3,8 +3,10 @@ import { useEffect, useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import ls from 'localstorage-slim';
 
-import { AsidePodtunes, ChapterList, HeaderComponent } from '../components';
-import { Entry, Result } from '../interfaces';
+import { Entry, Result } from '../../interfaces';
+import { device } from '../../styles';
+import { AsideTunes, ChapterList } from './components';
+import { Header } from '../../components';
 
 const WrpDetail = styled.section`
   display: flex;
@@ -18,10 +20,16 @@ const WrpDetail = styled.section`
 const ContainerTunes = styled.div`
   display: flex;
   flex: 1 1;
-  flex-direction: row;
-  gap: 4rem;
+  flex-direction: column;
+  @media ${device.lg} {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  @media ${device.xxl} {
+    gap: 4rem;
+  }
 `;
-export const AppPodtunesDetail = () => {
+export const AppDetail = () => {
   const [tune, setTune] = useState<Result[]>();
   const [tuneInfo, setTuneInfo] = useState<Entry>();
   //  const [selectEpisode, setSelectEpisode] = useState<Result>();
@@ -62,14 +70,14 @@ export const AppPodtunesDetail = () => {
 
   return (
     <>
-      <HeaderComponent />
+      <Header />
 
       <WrpDetail>
         <ContainerTunes>
           {tune != null && tune.length > 0 ? (
             <>
-              <AsidePodtunes tune={tune} podtuneInfo={tuneInfo} />
-              <ChapterList tune={tune} />
+              <AsideTunes tune={tune} podtuneInfo={tuneInfo} />
+              <ChapterList tune={tune} tuneId={tuneId} />
             </>
           ) : (
             <h1>Hello!!!</h1>

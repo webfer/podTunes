@@ -11,4 +11,5 @@ export interface DefaultTheme {
   colorTitle: string;
   colorTogleTheme: string;
   colorBorderAvatar: string;
+  backgroundChapterList: string;
 }

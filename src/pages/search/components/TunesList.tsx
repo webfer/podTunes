@@ -2,9 +2,10 @@ import { useEffect, useMemo, useState } from 'react';
 import styled from 'styled-components';
 import ls from 'localstorage-slim';
 
-import { HeaderComponent, FilterPodtunes, CardList } from '.';
-import { Entry } from '../interfaces';
+import { Entry } from '../../../interfaces';
 import { useNavigate } from 'react-router-dom';
+import { CardSearch, FilterTunes } from '.';
+import { Header } from '../../../components';
 
 // Styles
 const WrpCards = styled.section`
@@ -35,7 +36,7 @@ const BaseUrl =
 // Encrypt data on localstorage in order to protect data
 ls.config.encrypt = true;
 
-export const PodtunesList = () => {
+export const TunesList = () => {
   const [podtunes, setPodtunes] = useState<Entry[]>([]);
   const [filterPodtunes, setFilterPodtunes] = useState<string | null>(null);
 
@@ -76,8 +77,8 @@ export const PodtunesList = () => {
   }, []);
   return (
     <>
-      <HeaderComponent />
-      <FilterPodtunes
+      <Header />
+      <FilterTunes
         FilteredPodtunes={FilteredPodtunes}
         setFilterPodtunes={setFilterPodtunes}
       />
@@ -86,7 +87,7 @@ export const PodtunesList = () => {
           {FilteredPodtunes?.length > 0 ? (
             // Map every podcast
             FilteredPodtunes.map((pods, ind) => (
-              <CardList tune={pods} key={ind} navigate={Navigate} />
+              <CardSearch tune={pods} key={ind} navigate={Navigate} />
             ))
           ) : (
             // If your search didn't yield any results, show a message on the screen

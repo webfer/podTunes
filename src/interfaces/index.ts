@@ -1,2 +1,2 @@
-export * from './ThemeInterfaces';
-export * from './PodtunesInterface';
+export * from './ThemeInterface';
+export * from './TunesInterface';

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Entry } from '../interfaces';
+import { Entry } from '../../../interfaces';
 
 const WrpFilter = styled.section`
   display: flex;
@@ -44,7 +44,7 @@ interface Props {
   setFilterPodtunes: (podcast: string) => void;
 }
 
-export const FilterPodtunes = ({ ...props }: Props) => {
+export const FilterTunes = ({ ...props }: Props) => {
   return (
     <>
       <WrpFilter>

@@ -1,11 +1,6 @@
 import styled from 'styled-components';
-import { Entry } from '../interfaces';
-import { device } from '../styles';
-
-interface Props {
-  tune: Entry;
-  navigate: (path: string, state?: any) => void;
-}
+import { Entry } from '../../../interfaces';
+import { device } from '../../../styles';
 
 // Styles
 const WrpCard = styled.div`
@@ -87,8 +82,13 @@ const Author = styled.p`
   margin-top: auto;
 `;
 
+interface Props {
+  tune: Entry;
+  navigate: (path: string, state?: any) => void;
+}
+
 // Main card
-export const CardList = ({ tune, navigate }: Props) => {
+export const CardSearch = ({ tune, navigate }: Props) => {
   return (
     <>
       <WrpCard
@@ -98,7 +98,6 @@ export const CardList = ({ tune, navigate }: Props) => {
               tune,
             },
           });
-          console.log(tune);
         }}
       >
         <CardItem>

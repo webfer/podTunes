@@ -1,3 +1,3 @@
 export * from './GlobalStyles';
 export * from './FontFamily';
-export * from './MediaQuery';
+export * from './MediaQueries';
