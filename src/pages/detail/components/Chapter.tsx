@@ -83,7 +83,6 @@ export const Chapter = ({
 }: Props) => {
   return (
     <>
-      {console.log(tune)}
       <WrpChapterList>
         <WrpChapterTotal>
           <h3>Episodes: {tune.length - 1}</h3>
@@ -97,7 +96,7 @@ export const Chapter = ({
             </tr>
           </thead>
           <tbody>
-            {tune.map((chapter, index) => {
+            {tune.slice(1).map((chapter, index) => {
               return (
                 <tr
                   key={index}
