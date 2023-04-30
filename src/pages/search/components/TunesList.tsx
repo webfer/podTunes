@@ -6,6 +6,7 @@ import { Entry } from '../../../interfaces';
 import { useNavigate } from 'react-router-dom';
 import { CardSearch, FilterTunes } from '.';
 import { Header } from '../../../components';
+import { Skeleton } from '../../../ui/skeleton';
 
 // Styles
 const WrpCards = styled.section`
@@ -37,6 +38,7 @@ const BaseUrl =
 ls.config.encrypt = true;
 
 export const TunesList = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [podtunes, setPodtunes] = useState<Entry[]>([]);
   const [filterPodtunes, setFilterPodtunes] = useState<string | null>(null);
 
@@ -59,22 +61,28 @@ export const TunesList = () => {
   }, [filterPodtunes, podtunes]);
 
   useEffect(() => {
-    // validate if there is data on localStorage, if there isn't save it on localstorage
-    ls.get('podtunes') === null
-      ? fetch(BaseUrl)
-          .then(async (response) => await response.json())
-          .then((response) => {
-            setPodtunes(response.feed.entry);
-            // save podcast in localstorage just for 1 day (86400)
-            ls.set('podtunes', response.feed.entry, { ttl: 86400 });
-          })
-          .catch((err) => {
-            // catch error if it is generated
-            console.log('Error fetching data: ', err);
-          })
-      : // if there is data set podcast
-        setPodtunes(ls.get('podtunes') as React.SetStateAction<Entry[]>);
+    const getData = async () => {
+      // validate if there is data on localStorage, if there isn't save it on localstorage
+      setIsLoading(true);
+      ls.get('podtunes') === null
+        ? fetch(BaseUrl)
+            .then(async (response) => await response.json())
+            .then((response) => {
+              setPodtunes(response.feed.entry);
+              // save podcast in localstorage just for 1 day (86400)
+              ls.set('podtunes', response.feed.entry, { ttl: 86400 });
+            })
+            .catch((err) => {
+              // catch error if it is generated
+              console.log('Error fetching data: ', err);
+            })
+        : // if there is data set podcast
+          setPodtunes(ls.get('podtunes') as React.SetStateAction<Entry[]>);
+      setIsLoading(false);
+    };
+    getData();
   }, []);
+
   return (
     <>
       <Header />
@@ -84,19 +92,15 @@ export const TunesList = () => {
       />
       <WrpCards>
         <ContinerCards>
-          {FilteredPodtunes?.length > 0 ? (
-            // Map every podcast
-            FilteredPodtunes.map((pods, ind) => (
-              <CardSearch tune={pods} key={ind} navigate={Navigate} />
-            ))
-          ) : (
-            // If your search didn't yield any results, show a message on the screen
-            <NoResultText>
-              We apologize for the inconvenience, but your search did not yield
-              any results. Please try using a different search term to find what
-              you are looking for.
-            </NoResultText>
-          )}
+          {isLoading
+            ? FilteredPodtunes.map((pods, idx) => (
+                <Skeleton tune={pods} key={idx} />
+              ))
+            : FilteredPodtunes?.length > 0
+            ? FilteredPodtunes.map((tuns, ind) => (
+                <CardSearch tune={tuns} key={ind} navigate={Navigate} />
+              ))
+            : ''}
         </ContinerCards>
       </WrpCards>
     </>

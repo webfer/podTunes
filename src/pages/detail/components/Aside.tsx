@@ -98,6 +98,7 @@ export const Aside = ({
             <AsideInfoTitle>Description:</AsideInfoTitle>
             <DescriptionAside>{tuneInfo?.summary.label}</DescriptionAside>
           </WrpAsideTunes>
+
           {selectChapter == null ? (
             <Chapter
               tune={tune}

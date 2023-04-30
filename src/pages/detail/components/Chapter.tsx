@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { device } from '../../../styles';
-import { type Result } from '../../../interfaces';
+import { Result } from '../../../interfaces';
 import { formatTime } from '../../../helpers/formatTime';
 
 const WrpChapterList = styled.div`
@@ -96,7 +96,8 @@ export const Chapter = ({
             </tr>
           </thead>
           <tbody>
-            {tune.slice(1).map((chapter, index) => {
+            {tune.map((chapter, index) => {
+              console.log(tune);
               return (
                 <tr
                   key={index}

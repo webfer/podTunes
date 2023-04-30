@@ -1,1 +1,2 @@
-export * from './AsideSkeleton';
+export * from './Skeleton';
+export * from './SkeletonChapter';

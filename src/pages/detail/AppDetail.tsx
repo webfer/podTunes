@@ -7,6 +7,7 @@ import { Header } from '../../components';
 import { type Entry, type Result } from '../../interfaces';
 import { device } from '../../styles';
 import { Aside } from './components';
+import { SkeletonChapter } from '../../ui/skeleton';
 
 const WrpDetail = styled.section`
   display: flex;
@@ -39,13 +40,16 @@ export const AppDetail = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const allOrigins = (baseUrl: string) =>
+    `https://api.allorigins.win/get?url=${encodeURI(baseUrl)}`;
+
   // console.log(PodtunesId);
   useEffect(() => {
     ls.get(`${tuneId}`) === null
       ? fetch(
-          `https://api.allorigins.win/get?url=${encodeURIComponent(
-            `https://itunes.apple.com/lookup?id=${tuneId}&media=podcast&entity=podcastEpisode&limit=20`
-          )}`
+          allOrigins(
+            `https://itunes.apple.com/lookup?id=${tuneId}&media=podcast&entity=podcastEpisode&limit=100`
+          )
         )
           .then(async (res) => {
             if (res.ok) return await res.json();
@@ -87,7 +91,8 @@ export const AppDetail = () => {
               setSelectChapter={setSelectChapter}
             />
           ) : (
-            <h1>Hello!!!</h1>
+            <SkeletonChapter />
+            // <h1>Hello!!!</h1>
           )}
         </ContainerTunes>
       </WrpDetail>
