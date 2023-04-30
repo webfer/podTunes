@@ -10,7 +10,7 @@ export const AppRouter = () => {
         {/* <Route path="/episode" element={<AppChapter />} /> */}
         <Route path="podcast/:tuneId" element={<AppDetail />} />
         <Route
-          path="podcast/:tuneId/episode/:chapterId"
+          path="podcast/:tuneId/episode/:episodeId"
           element={<AppDetail />}
         />
 
