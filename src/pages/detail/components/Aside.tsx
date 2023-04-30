@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Result } from '../../../interfaces';
+import { type Result } from '../../../interfaces';
 import { device } from '../../../styles';
 import { Chapter, ChapterPlayer } from '.';
 
