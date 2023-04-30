@@ -38,13 +38,16 @@ export const AppDetail = () => {
 
   const location = useLocation();
 
+  const allOrigins = (baseUrl: string) =>
+    `https://api.allorigins.win/get?url=${encodeURI(baseUrl)}`;
+
   // console.log(PodtunesId);
   useEffect(() => {
     if (ls.get(`${tuneId}`) === null) {
       fetch(
-        `https://api.allorigins.win/get?url=${encodeURIComponent(
-          `https://itunes.apple.com/lookup?id=${tuneId}&media=podcast&entity=podcastEpisode&limit=20`
-        )}`
+        allOrigins(
+          `https://itunes.apple.com/lookup?id=${tuneId}&media=podcast&entity=podcastEpisode&limit=100`
+        )
       )
         .then(async (res) => {
           if (res.ok) return await res.json();
