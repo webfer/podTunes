@@ -255,6 +255,9 @@ export const lightTheme = {
   colorAuthorText: 'var(--gray-700)',
   colorBorderAvatar: 'var(--gray-500)',
   backgroundChapterList: 'var(--gray-200)',
+  backgroundAudioPlayer: 'var(--gray-400)',
+  backgroundAudioPlayerMuteButton: 'var(--gray-500)',
+  backgroundAudioPlayerTime: 'var(--dark)',
 };
 
 export const darkTheme = {
@@ -271,4 +274,7 @@ export const darkTheme = {
   colorAuthorText: 'var(--gray-500)',
   colorBorderAvatar: 'var(--gray-800)',
   backgroundChapterList: 'var(--gray-900)',
+  backgroundAudioPlayer: 'var(--gray-700)',
+  backgroundAudioPlayerMuteButton: 'var(--gray-500)',
+  backgroundAudioPlayerTime: 'var(--white)',
 };

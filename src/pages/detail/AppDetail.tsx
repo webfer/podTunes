@@ -11,7 +11,7 @@ import { SkeletonChapter } from '../../ui/skeleton';
 
 const WrpDetail = styled.section`
   display: flex;
-  margin: 5rem auto 0;
+  margin: 5rem auto;
   max-width: 90rem;
   padding: 0 1rem;
   position: relative;

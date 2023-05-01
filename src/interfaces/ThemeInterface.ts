@@ -12,4 +12,7 @@ export interface DefaultTheme {
   colorTogleTheme: string;
   colorBorderAvatar: string;
   backgroundChapterList: string;
+  backgroundAudioPlayer: string;
+  backgroundAudioPlayerMuteButton: string;
+  backgroundAudioPlayerTime: string;
 }

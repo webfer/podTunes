@@ -63,6 +63,7 @@ const DescriptionAside = styled.p`
   font-style: italic;
   width: 100%;
   overflow-wrap: break-word;
+  line-height: 1.8rem;
 `;
 
 interface Props {
