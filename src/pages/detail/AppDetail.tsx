@@ -40,7 +40,9 @@ export const AppDetail = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  var cors_api_url = `https://cors-anywhere.herokuapp.com/https://itunes.apple.com/lookup?id=${tuneId}&media=podcast&entity=podcastEpisode&limit=20`;
+  var cors_api_url = `https://api.allorigins.win/get?url=${encodeURIComponent(
+    `https://itunes.apple.com/lookup?id=${tuneId}&media=podcast&entity=podcastEpisode&limit=20`
+  )}`;
 
   // console.log(PodtunesId);
   useEffect(() => {
@@ -51,8 +53,8 @@ export const AppDetail = () => {
             throw new Error("The network's response was unsatisfactory.");
           })
           .then(async (data) => {
-            setTune(data.results);
-            ls.set(`${tuneId}`, data.results, {
+            setTune(JSON.parse(data.contents).results);
+            ls.set(`${tuneId}`, JSON.parse(data.contents).results, {
               ttl: 86400,
             });
           })
