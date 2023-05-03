@@ -70,6 +70,10 @@ export const AppDetail = () => {
     }
   }, [location, tune]);
 
+  const backToChapter = () => {
+    setSelectChapter(undefined);
+  };
+
   return (
     <>
       <Header />
@@ -84,6 +88,7 @@ export const AppDetail = () => {
               tuneInfo={tuneInfo}
               selectChapter={selectChapter}
               setSelectChapter={setSelectChapter}
+              backToChapter={backToChapter}
             />
           ) : (
             <SkeletonChapter />

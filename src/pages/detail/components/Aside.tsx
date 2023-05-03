@@ -21,6 +21,7 @@ const WrpAsideTunes = styled.div`
 `;
 
 const ImgCardAside = styled.img`
+  cursor: pointer;
   max-width: 100%;
   height: auto;
   border-radius: 0.5rem;
@@ -48,8 +49,10 @@ const WrpInfoAside = styled.div`
 const AsideInfoTitle = styled.h4`
   padding: 0.5rem 0;
   width: 100%;
+  cursor: pointer;
 `;
 const AsideInfoAuthor = styled.span`
+  cursor: pointer;
   font-style: italic;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -73,6 +76,7 @@ interface Props {
   selectChapter: Result | undefined;
   tuneId: string | undefined;
   navigate: (path: string) => void;
+  backToChapter: () => void;
 }
 
 export const Aside = ({
@@ -82,6 +86,7 @@ export const Aside = ({
   tuneId,
   setSelectChapter,
   navigate,
+  backToChapter,
 }: Props) => {
   return (
     <>
@@ -91,10 +96,25 @@ export const Aside = ({
             <ImgCardAside
               src={tune[0].artworkUrl600}
               alt={tune[0].collectionName}
+              onClick={() => {
+                backToChapter();
+              }}
             />
             <WrpInfoAside>
-              <AsideInfoTitle>{tune[0].collectionName}</AsideInfoTitle>
-              <AsideInfoAuthor>by {tune[0].artistName}</AsideInfoAuthor>
+              <AsideInfoTitle
+                onClick={() => {
+                  backToChapter();
+                }}
+              >
+                {tune[0].collectionName}
+              </AsideInfoTitle>
+              <AsideInfoAuthor
+                onClick={() => {
+                  backToChapter();
+                }}
+              >
+                by {tune[0].artistName}
+              </AsideInfoAuthor>
             </WrpInfoAside>
             <AsideInfoTitle>Description:</AsideInfoTitle>
             <DescriptionAside>{tuneInfo?.summary.label}</DescriptionAside>
