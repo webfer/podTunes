@@ -58,6 +58,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
     --body-color: #212529;
     --body-bg-dark: #151515;
     --body-bg: #fff;
+    --bg-light-skeleton : rgb(221 219 221);
 }
 
 
@@ -258,6 +259,7 @@ export const lightTheme = {
   backgroundAudioPlayer: 'var(--gray-400)',
   backgroundAudioPlayerMuteButton: 'var(--gray-500)',
   backgroundAudioPlayerTime: 'var(--dark)',
+  backgroundSkeleton: 'var(--bg-light-skeleton)',
 };
 
 export const darkTheme = {
@@ -277,4 +279,5 @@ export const darkTheme = {
   backgroundAudioPlayer: 'var(--gray-700)',
   backgroundAudioPlayerMuteButton: 'var(--gray-500)',
   backgroundAudioPlayerTime: 'var(--white)',
+  backgroundSkeleton: 'var(--gray-900)',
 };

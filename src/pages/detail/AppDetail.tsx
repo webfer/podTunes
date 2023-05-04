@@ -7,7 +7,7 @@ import { Header } from '../../components';
 import { type Entry, type Result } from '../../interfaces';
 import { device } from '../../styles';
 import { Aside } from './components';
-import { SkeletonChapter } from '../../ui/skeleton';
+import { AsideSkeleton } from '../../ui/skeleton';
 
 const WrpDetail = styled.section`
   display: flex;
@@ -93,8 +93,7 @@ export const AppDetail = () => {
               backToChapter={backToChapter}
             />
           ) : (
-            <SkeletonChapter />
-            // <h1>Hello!!!</h1>
+            <AsideSkeleton />
           )}
         </ContainerTunes>
       </WrpDetail>

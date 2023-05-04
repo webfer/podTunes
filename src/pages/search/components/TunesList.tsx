@@ -92,15 +92,21 @@ export const TunesList = () => {
       />
       <WrpCards>
         <ContinerCards>
-          {isLoading
-            ? FilteredPodtunes.map((pods, idx) => (
-                <Skeleton tune={pods} key={idx} />
-              ))
-            : FilteredPodtunes?.length > 0
-            ? FilteredPodtunes.map((tuns, ind) => (
-                <CardSearch tune={tuns} key={ind} navigate={Navigate} />
-              ))
-            : ''}
+          {isLoading ? (
+            FilteredPodtunes.map((pods, idx) => (
+              <Skeleton tune={pods} key={idx} />
+            ))
+          ) : FilteredPodtunes?.length > 0 ? (
+            FilteredPodtunes.map((tuns, ind) => (
+              <CardSearch tune={tuns} key={ind} navigate={Navigate} />
+            ))
+          ) : (
+            <NoResultText>
+              We apologize for the inconvenience, but your search did not yield
+              any results. Please try using a different search term to find what
+              you are looking for.
+            </NoResultText>
+          )}
         </ContinerCards>
       </WrpCards>
     </>

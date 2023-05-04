@@ -15,4 +15,5 @@ export interface DefaultTheme {
   backgroundAudioPlayer: string;
   backgroundAudioPlayerMuteButton: string;
   backgroundAudioPlayerTime: string;
+  backgroundSkeleton: string;
 }

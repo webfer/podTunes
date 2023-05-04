@@ -51,6 +51,10 @@ const AsideInfoTitle = styled.h4`
   width: 100%;
   cursor: pointer;
 `;
+const AsideInfoTitleDescription = styled(AsideInfoTitle)`
+  cursor: default;
+`;
+
 const AsideInfoAuthor = styled.span`
   cursor: pointer;
   font-style: italic;
@@ -116,7 +120,7 @@ export const Aside = ({
                 by {tune[0].artistName}
               </AsideInfoAuthor>
             </WrpInfoAside>
-            <AsideInfoTitle>Description:</AsideInfoTitle>
+            <AsideInfoTitleDescription>Description:</AsideInfoTitleDescription>
             <DescriptionAside>{tuneInfo?.summary.label}</DescriptionAside>
           </WrpAsideTunes>
 
