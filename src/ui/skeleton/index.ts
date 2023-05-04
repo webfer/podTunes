@@ -1,2 +1,2 @@
 export * from './Skeleton';
-export * from './AsideSkeleton';
+export * from './AppSkeleton';

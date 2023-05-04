@@ -94,7 +94,7 @@ export const Aside = ({
 }: Props) => {
   return (
     <>
-      {tune !== undefined ? (
+      {
         <>
           <WrpAsideTunes>
             <ImgCardAside
@@ -135,9 +135,7 @@ export const Aside = ({
             <ChapterPlayer selectChapter={selectChapter} />
           )}
         </>
-      ) : (
-        <h2>Hello</h2>
-      )}
+      }
     </>
   );
 };
