@@ -202,7 +202,7 @@ const TabletChapter = styled.table`
   }
 `;
 
-export const AsideSkeleton = () => {
+export const AppSkeleton = () => {
   return (
     <>
       <WrpAsideTunes>
