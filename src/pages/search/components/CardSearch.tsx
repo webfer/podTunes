@@ -47,10 +47,10 @@ const CardInfo = styled.div`
 `;
 
 const WrpImg = styled.div`
-  height: 6rem;
+  height: 7rem;
   margin-bottom: 1rem;
   margin-top: -5rem;
-  width: 6rem;
+  width: 7rem;
 `;
 
 const TitleCard = styled.h4`
