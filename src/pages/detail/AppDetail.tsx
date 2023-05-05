@@ -40,7 +40,7 @@ export const AppDetail = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  var cors_api_url = `https://api.allorigins.win/get?url=${encodeURIComponent(
+  const cors_api_url = `https://api.allorigins.win/get?url=${encodeURIComponent(
     `https://itunes.apple.com/lookup?id=${tuneId}&media=podcast&entity=podcastEpisode&limit=20`
   )}`;
 
