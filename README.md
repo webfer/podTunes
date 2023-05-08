@@ -21,6 +21,9 @@ The app features a search bar that lets users search for podcasts by keywords, t
 The app was built using the latest version of **React**, a popular JavaScript library for building user interfaces. **Functional components** and **Hooks** were utilized to make the app more modular and easier to maintain. **React Router** was used to implement client-side routing, allowing users to navigate between different pages of the app. **Styled-Components** were used for styling, providing a convenient way to style React components with CSS. **Vite** and **Babel** were used to optimize and transpile the app's code. **CSS animations** were used to create engaging visual effects. **Git** and **GitHub** were used for version control and collaboration among team members. Finally, **unit testing** was used to ensure the quality and functionality of the app.
 <br>
 <br>
+In addition to the technologies and tools mentioned earlier, this app also features a theming option. This means that the app's visual appearance can be customized according to different themes or color schemes. The theming option was implemented using a combination of CSS variables and JavaScript logic to dynamically apply styles to the components based on the selected theme. This feature adds a level of personalization and flexibility to the app, allowing users to choose a theme that best suits their preferences or needs.
+<br>
+<br>
 
 # Getting Started with Create React App
 
