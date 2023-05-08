@@ -22,6 +22,7 @@ The app was built using the latest version of:
 
 <ol>
 <li>HTML5 provides new features and improvements for building modern web applications.</li>
+<li>TypeScript helps improve code quality and maintainability.</li>
 <li>React, a popular JavaScript library for building user interfaces. </li>
 <li>Functional components and Hooks were utilized to make the app more modular and easier to maintain.</li>
 <li>React Router was used to implement client-side routing, allowing users to navigate between different pages of the app.</li>
