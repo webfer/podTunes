@@ -1,12 +1,36 @@
+# PodTunes: Mini-Application to listening Podcasts ( React & Styled-Components )
+
+<br>
+<br>
+<p align="center">
+
+<img src="src/assets/images/cover.jpg" width="650">
+
+</p>
+
+### 🚧 **Descripción**
+
+The mini-application for listening to podcasts created in React and styled components is a user-friendly platform that allows users to search for their favorite podcasts, view podcast details, and play podcast episodes directly from the app.
+
+The app features a search bar that lets users search for podcasts by keywords, titles, or topics. Once the user selects a podcast, they can view its details, such as the podcast's name, description, and episode list. The app also has a built-in audio player that allows users to play, pause, and skip podcast episodes. Overall, this mini-application provides a convenient and intuitive way for users to access and listen to podcasts.
+<br>
+<br>
+
+# Tech-stack used on this app.
+
+The app was built using the latest version of **React**, a popular JavaScript library for building user interfaces. **Functional components** and **Hooks** were utilized to make the app more modular and easier to maintain. **React Router** was used to implement client-side routing, allowing users to navigate between different pages of the app. **Styled-Components** were used for styling, providing a convenient way to style React components with CSS. **Vite** and **Babel** were used to optimize and transpile the app's code. **CSS animations** were used to create engaging visual effects. **Git** and **GitHub** were used for version control and collaboration among team members. Finally, **unit testing** was used to ensure the quality and functionality of the app.
+<br>
+<br>
+
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Vite](https://vitejs.dev/), as a template.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
