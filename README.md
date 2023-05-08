@@ -38,6 +38,9 @@ In addition to the technologies and tools mentioned earlier, this app also featu
 <br>
 <br>
 
+<br>
+<br>
+
 This project was bootstrapped with [Vite](https://vitejs.dev/), as a template.
 
 - Before starting, clone the repository or download it to the local machine.
