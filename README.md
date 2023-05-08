@@ -18,22 +18,41 @@ The app features a search bar that lets users search for podcasts by keywords, t
 
 # Tech-stack used on this app.
 
-The app was built using the latest version of **React**, a popular JavaScript library for building user interfaces. **Functional components** and **Hooks** were utilized to make the app more modular and easier to maintain. **React Router** was used to implement client-side routing, allowing users to navigate between different pages of the app. **Styled-Components** were used for styling, providing a convenient way to style React components with CSS. **Vite** and **Babel** were used to optimize and transpile the app's code. **CSS animations** were used to create engaging visual effects. **Git** and **GitHub** were used for version control and collaboration among team members. Finally, **unit testing** was used to ensure the quality and functionality of the app.
+The app was built using the latest version of:
+
+<ol>
+<li>HTML5 provides new features and improvements for building modern web applications.</li>
+<li>React, a popular JavaScript library for building user interfaces. </li>
+<li>Functional components and Hooks were utilized to make the app more modular and easier to maintain.</li>
+<li>React Router was used to implement client-side routing, allowing users to navigate between different pages of the app.</li>
+<li>Styled-Components were used for styling, providing a convenient way to style React components with CSS.</li>
+<li> Vite and Babel were used to optimize and transpile the app's code.</li>
+<li>CSS 3 animations were used to create engaging visual effects.</li>
+<li>Git and GitHub were used for version control and collaboration among team members.</li>
+<li>Finally, unit testing was used to ensure the quality and functionality of the app.</li>
+</ol>
+  
 <br>
 <br>
 In addition to the technologies and tools mentioned earlier, this app also features a theming option. This means that the app's visual appearance can be customized according to different themes or color schemes. The theming option was implemented using a combination of CSS variables and JavaScript logic to dynamically apply styles to the components based on the selected theme. This feature adds a level of personalization and flexibility to the app, allowing users to choose a theme that best suits their preferences or needs.
 <br>
 <br>
 
-# Getting Started with Create React App
-
 This project was bootstrapped with [Vite](https://vitejs.dev/), as a template.
+
+- Before starting, clone the repository or download it to the local machine.
+
+## Install dependencies
+
+In the project directory, you can run:
+
+`yarn install`
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn dev`
+`yarn dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -41,12 +60,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+`yarn test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+`yarn build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
