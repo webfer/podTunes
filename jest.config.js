@@ -1,7 +1,7 @@
 export default {
   moduleDirectories: ['node_modules'],
   transform: {
-    '\\.tsx?$': 'ts-jest',
+    // '\\.tsx?$': 'ts-jest',
     '\\.jsx?$': 'babel-jest', // if you have jsx tests too
   },
   globals: {
