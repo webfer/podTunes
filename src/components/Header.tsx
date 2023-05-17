@@ -15,10 +15,6 @@ const HeaderHtml = styled.header`
   }
 `;
 
-interface Props {
-  name: string;
-}
-
 export const Header = () => {
   return (
     <>
@@ -27,7 +23,4 @@ export const Header = () => {
       </HeaderHtml>
     </>
   );
-};
-export const getSaludo = ({ name }: Props) => {
-  return 'Hola ' + name;
 };
